@@ -215,14 +215,9 @@
         "ApplicationLoadBalancer": {
             "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
             "Properties": {
+                "Name": "cf-shtannikov-app-load-balancer",
                 "SecurityGroups": [ { "Ref": "SecurityGroup" } ],
-                "Subnets": [ { "Ref": "PublicSubnetA" }, { "Ref": "PublicSubnetB" } ],
-                "Tags": [
-                    {
-                        "Key": "Name",
-                        "Value": "cf-shtannikov-app-load-balancer"
-                    }
-                ]
+                "Subnets": [ { "Ref": "PublicSubnetA" }, { "Ref": "PublicSubnetB" } ]
             }
         },
         "ALBListener": {
